@@ -1,21 +1,21 @@
-// Goal is have users enter a month 1-12, 2 enter a year, and 
-// then receive an input how many days are in the month.
+// Goal is to have users inputs the weight of a object being shipped and the distance it is being shipped to calculate the shipping cost based on predefined rates.
 
 #include <iostream>
 
 int main()
 {
-	std::cout << "What is the month? (1-12): ";
-	int month;
-	std::cin >> month;
+	// take weight input
+	std::cout << "What is the weight of the item in Kilograms?: ";
+	int weight;
+	std::cin >> weight;
 
-	// take year input
-	std::cout << "What is the year?: ";
-	int year;
-	std::cin >> year;
+	// take distance item needs to be shipped
+	std::cout << "How far will this item be shipped?: ";
+	int distance;
+	std::cin >> distance;
 
-	// determine number of days in month
-	if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+	// determine the shipping cost based on weight and distance
+	if (weight == 1 || weight == 2 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
 	{
 		std::cout << "There are 31 days in this month.\n";
 	}
