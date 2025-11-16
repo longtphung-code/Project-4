@@ -25,7 +25,7 @@ int main()
 	}
 	else if (month == 2)
 	{
-		// check for leap year
+		// check for leap year.
 		if ((static_cast<int>(year) % 4 == 0 && static_cast<int>(year) % 100 != 0) || (static_cast<int>(year) % 400 == 0))
 		{
 			std::cout << "There are 29 days in this month.\n";
