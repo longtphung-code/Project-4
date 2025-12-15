@@ -18,6 +18,8 @@ int main()
 
 	double rate;
 
+	//the lines below creates the rates are as followed:
+
 	if (weight > 0 && weight <= 2)
 		rate = 1.10;
 	else if (weight > 2 && weight <= 6)
@@ -27,10 +29,16 @@ int main()
 	else if (weight > 10 && weight <= 20)
 		rate = 4.80;
 	else
+
+		//below the rates for invalid weight input
+
 	{
 		std::cout << "Invalid weight input." << std::endl;
 		return 0;
 	}
+
+	// calculates the miles into segments of 500 miles and then calculates the total cost
+
 	int segments = (distance + 499) / 500; // round up to the nearest 500 mile segment
 	double totalcost = rate * segments;
 	std::cout << "The total shipping cost is: $" << totalcost << std::endl;
