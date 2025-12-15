@@ -3,40 +3,33 @@
 
 #include <iostream>
 
-int main()
-{
-	std::cout << "What is the month? (1-12): ";
-	int month;
-	std::cin >> month;
 
-	// take year input
-	std::cout << "What is the year?: ";
-	int year;
-	std::cin >> year;
+while True:
+	choice = input("""Geometry Calculator
+		1. Calculate the Area of a Circle
+		2. Calculate the Area of a Rectangle
+		3. Calculate the Area of a Triangle
+		4. Quit
+		Enter your choice(1 - 4): """)
 
-	// determine number of days in month
-	if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
-	{
-		std::cout << "There are 31 days in this month.\n";
-	}
-	else if (month == 4 || month == 6 || month == 9 || month == 11)
-	{
-		std::cout << "There are 30 days in this month.\n";
-	}
-	else if (month == 2)
-	{
-		// check for leap year.
-		if ((static_cast<int>(year) % 4 == 0 && static_cast<int>(year) % 100 != 0) || (static_cast<int>(year) % 400 == 0))
-		{
-			std::cout << "There are 29 days in this month.\n";
-		}
-		else
-		{
-			std::cout << "There are 28 days in this month.\n";
-		}
-	}
-	else
-	{
-		std::cout << "Invalid month input.\n";
-	}
-}
+		if choice == "1": 
+			radius = float(input("Enter the radius of the circle: "))
+			area - 3.1459 * radius ** 2
+			print("Area:", area)
+
+		elif choice == "2":
+			length = float(input("Enter the length of the rectangle: "))
+			width = float(input("Enter the width of the rectangle: "))
+			area = length * width
+			print("Area:", area)
+
+		elif choice == "3":
+			base = float(input("Enter the base of the triangle: "))
+			height = float(input("Enter the height of the triangle: "))
+			area = 0.5 * base * height
+			print("Area:", area)
+		elif choice == "4":
+			print("Exiting the program.")
+			break
+		else:
+	print("Invalid choice. Please select a valid option (1-4).")
