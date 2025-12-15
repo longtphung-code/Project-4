@@ -1,28 +1,67 @@
-// Goal is have users enter a month 1-12, 2 enter a year, and 
-// then receive an input how many days are in the month.
+// The code is intended to calculate the area of different geometric shapes based on user input.
 
 #include <iostream>
+#include <string>
 
+//Print the lines for chosing the shape and getting the input.
 
+int main()
+{
+	while (true)
+	{
+		std::cout << "Geometry Calculator\n";
+		std::cout << "1. Calculate the Area of a Circle\n";
+		std::cout << "2. Calculate the Area of a Rectangle\n";
+		std::cout << "3. Calculate the Area of a Triangle\n";
+		std::cout << "4. Quit\n";
+	
 
-		if choice == "1": 
-			radius = float(input("Enter the radius of the circle: "))
-			area - 3.1459 * radius ** 2
-			print("Area:", area)
+		std::cout << "Enter your choice (1-4): ";
+		std::string choice;
+		std::cin >> choice;
 
-		elif choice == "2":
-			length = float(input("Enter the length of the rectangle: "))
-			width = float(input("Enter the width of the rectangle: "))
-			area = length * width
-			print("Area:", area)
+		if (choice == "1")
+		{
+			double radius;
+			std::cout << "Enter the radius of the circle: ";
+			std::cin >> radius;
 
-		elif choice == "3":
-			base = float(input("Enter the base of the triangle: "))
-			height = float(input("Enter the height of the triangle: "))
-			area = 0.5 * base * height
-			print("Area:", area)
-		elif choice == "4":
-			print("Exiting the program.")
-			break
-		else:
-	print("Invalid choice. Please select a valid option (1-4).")
+			double area = 3.14159 * radius * radius;
+			std::cout << "The area of the circle is: " << area << "\n\n";
+		}
+		else if (choice == "2")
+		{
+			double length, width;
+			std::cout << "Enter the length: ";
+			std::cin >> length;
+			std::cout << "Enter the width: ";
+			std::cin >> width;
+
+			double area = length * width;
+			std::cout << "area: " << area << "\n\n";
+		}
+		else if (choice == "3")
+		{
+			double base, height;
+			std::cout << "Enter the base: ";
+			std::cin >> base;
+			std::cout << "Enter the height: ";
+			std::cin >> height;
+			double area = 0.5 * base * height;
+			std::cout << "The area of the triangle is: " << area << "\n\n";
+		}
+		else if (choice == "4")
+		{
+			std::cout << "Exiting the program. Goodbye!\n";
+			break;
+		}
+		else
+		{
+			std::cout << "Invalid choice. Please try again.\n\n";
+		}
+	}
+
+	return 0;
+
+}
+
