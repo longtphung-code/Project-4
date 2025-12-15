@@ -15,28 +15,24 @@ int main()
 	std::cin >> distance;
 
 	// determine the shipping cost based on weight and distance
-	if (weight == 1 || weight == 2 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
-	{
-		std::cout << "There are 31 days in this month.\n";
-	}
-	else if (month == 4 || month == 6 || month == 9 || month == 11)
-	{
-		std::cout << "There are 30 days in this month.\n";
-	}
-	else if (month == 2)
-	{
-		// check for leap year.
-		if ((static_cast<int>(year) % 4 == 0 && static_cast<int>(year) % 100 != 0) || (static_cast<int>(year) % 400 == 0))
-		{
-			std::cout << "There are 29 days in this month.\n";
-		}
-		else
-		{
-			std::cout << "There are 28 days in this month.\n";
-		}
-	}
+
+	double rate;
+
+	if (weight > 0 && weight <= 2)
+		rate = 1.10;
+	else if (weight > 2 && weight <= 6)
+		rate = 2.20;
+	else if (weight > 6 && weight <= 10)
+		rate = 3.70;
+	else if (weight > 10 && weight <= 20)
+		rate = 4.80;
 	else
 	{
-		std::cout << "Invalid month input.\n";
+		std::cout << "Invalid weight input." << std::endl;
+		return 0;
 	}
+	int segments = (distance + 499) / 500; // round up to the nearest 500 mile segment
+	double totalcost = rate * segments;
+	std::cout << "The total shipping cost is: $" << totalcost << std::endl;
+	return 0;
 }
