@@ -19,8 +19,11 @@ int main()
 		std::cout << "Enter your choice (1-4): ";
 		std::string choice;
 		std::cin >> choice;
+		
+		//using if else statements to determine which shape the user wants to calculate the area for.
 
-		if (choice == "1")
+
+		if (choice == "1")          //circle area calculation
 		{
 			double radius;
 			std::cout << "Enter the radius of the circle: ";
@@ -29,7 +32,7 @@ int main()
 			double area = 3.14159 * radius * radius;
 			std::cout << "The area of the circle is: " << area << "\n\n";
 		}
-		else if (choice == "2")
+		else if (choice == "2")      //rectangle area calculation
 		{
 			double length, width;
 			std::cout << "Enter the length: ";
@@ -38,9 +41,9 @@ int main()
 			std::cin >> width;
 
 			double area = length * width;
-			std::cout << "area: " << area << "\n\n";
+			std::cout << "area of the Rectangle is " << area << "\n\n";
 		}
-		else if (choice == "3")
+		else if (choice == "3")         //triangle area calculation
 		{
 			double base, height;
 			std::cout << "Enter the base: ";
@@ -50,7 +53,7 @@ int main()
 			double area = 0.5 * base * height;
 			std::cout << "The area of the triangle is: " << area << "\n\n";
 		}
-		else if (choice == "4")
+		else if (choice == "4")             //exit the program
 		{
 			std::cout << "Exiting the program. Goodbye!\n";
 			break;
