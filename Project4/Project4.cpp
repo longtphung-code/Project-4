@@ -4,13 +4,6 @@
 #include <iostream>
 
 
-while True:
-	choice = input("""Geometry Calculator
-		1. Calculate the Area of a Circle
-		2. Calculate the Area of a Rectangle
-		3. Calculate the Area of a Triangle
-		4. Quit
-		Enter your choice(1 - 4): """)
 
 		if choice == "1": 
 			radius = float(input("Enter the radius of the circle: "))
